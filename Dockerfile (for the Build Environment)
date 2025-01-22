@@ -1,0 +1,9 @@
+FROM node:18-alpine
+
+WORKDIR /app
+
+RUN npm install -g serverless
+
+COPY . .
+
+CMD ["/bin/sh"] # This allows Jenkins to execute commands inside the container
